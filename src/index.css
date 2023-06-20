@@ -1,7 +1,7 @@
-/* html,body{
+ html,body{
   width: 300px;
   height: 400px;
-/* } */                     USE THIS CODE TO change the size of the extenion */
+ }                     
 
 .search-container {
   display: flex;
