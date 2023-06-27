@@ -30,7 +30,7 @@ export default function Card2(props) {
       </CardContent>
       <CardActions>
       
-        <Button size="small"><a className='aaa' href={props.url}>Learn More</a></Button>
+        <Button size="small"><a className='aaa' href={props.url} target='_blank'>Learn More</a></Button>
       </CardActions>
     </Card>
   );
