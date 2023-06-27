@@ -105,8 +105,10 @@
 .caaa{
   display: grid;
   flex-wrap: wrap ;
-  padding: 2rem;
+  padding: 0.6rem;
   color: lightcoral;
+  border-color: black;
+  border: 3px;
  
 
 
@@ -116,6 +118,7 @@
   flex-wrap: wrap;
   padding: 2rem;
   color: lightcoral;
+  border-color: black;
 }
 
 .zzz{

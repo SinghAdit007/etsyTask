@@ -9,7 +9,7 @@ import img from './qa.png'
 import { flexbox, grid } from '@mui/system';
 export default function Card2(props) {
   return (
-    <Card sx={{ maxWidth: 300,maxHeight: 1100, backgroundColor: 'lightyellow' }} className= 'qqq'>
+    <Card sx={{ maxWidth: 300,maxHeight: 1100, backgroundColor: 'lightyellow', borderBlockColor:'black', border:'3px'}} className= 'qqq'>
       <CardMedia
         component="img"
         alt="etsy"
