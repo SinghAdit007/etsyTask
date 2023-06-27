@@ -5,7 +5,7 @@ import Search2 from './keyword';
 import List from './list';
 import List1 from './list3';
 import List2 from './list2';
-
+import Card from './Card';
 import { useState } from 'react';
 
 function App() {
@@ -48,6 +48,7 @@ function App() {
      <List2/>
       </div>}
       
+      <Card></Card>
 
     </div>
   );

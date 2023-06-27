@@ -26,3 +26,27 @@
     padding: 8px 16px;
   }
 }
+
+
+.card__top{
+  font-size: larger;
+
+}
+
+.ccc{
+  font-weight: 900;
+
+}
+
+.aaa{
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.caaa{
+  display: flex;
+  flex-wrap: wrap ;
+
+
+}

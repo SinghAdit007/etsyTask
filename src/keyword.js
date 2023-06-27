@@ -1,28 +1,37 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import Card2 from './Card';
+import Result from './data';
 function Search() {
     const [open4, setopen4] = useState(false);
     const [val,setval]=useState('');
 
 
-    const handleclick=()=>{
+    const handleclick=async()=>{
 
-        var headers = new Headers();
-headers.append("x-api-key", "0aa6qx7gfy3cds87hvijwe40");
-headers.append('Access-Control-Allow-Origin', 'true');
-headers.append('Access-Control-Allow-Credentials', 'true');
 
-var requestOptions = {
-    method: 'GET',
-    mode:'no-cors',
-    redireacted:true,
-    headers: headers,
-};
+        
+        Result.sort((a,b)=>(b.views-a.views))
+        
+        
+        Result.map((data,key)=>console.log(data,"a"))
+//         var headers = new Headers();
+// headers.append("x-api-key", "0aa6qx7gfy3cds87hvijwe40");
+// headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
+// headers.append('Access-Control-Allow-Credentials', 'true');
+// headers.append('Access-Control-Allow-Methods' , 'GET')
+
+// var requestOptions = {
+//     method: 'GET',
+//     credentials: "include",
+//     headers: headers,
+// };
             
-fetch(`https://api.etsy.com/v3/application/listings/active?client_id=aoeoryx59j26t30056nqabv8&keywords=${val}`   ,requestOptions)
-.then(response => console.log(response))
-.then(result => console.log(result))
-.catch(error => console.log('error', error));
+// await fetch(`https://api.etsy.com/v3/application/listings/active?client_id=aoeoryx59j26t30056nqabv8&keywords=jewellery`   , {method: 'GET', mode:'cors', credentials: 'include',
+// headers: {Accept: 'application/json'}})
+// .then(response => console.log(response))
+// .then(result => console.log(result))
+// .catch(error => console.log('error', error));
     }
     return (
         <div>
@@ -35,6 +44,13 @@ fetch(`https://api.etsy.com/v3/application/listings/active?client_id=aoeoryx59j2
                 <button onClick={handleclick} class="search-button">Search</button>
             </div>
 
+            {
+                Result.map((data,key)=>(
+<div className='caaa'>
+                    <Card2 title={data.title} description={data.description} url={data.url}></Card2>
+</div>
+                ))
+            }
 
         </div>
     )
