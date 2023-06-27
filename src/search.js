@@ -12,7 +12,7 @@ function Search() {
             <div class="search-container">
                 <input type="text" class="search-input" placeholder="Search product" />
                 <button onClick={() => setopen4(!open4)} class="search-button">Search</button>
-            </div>
+            </div> <br/>
 
 
         </div>

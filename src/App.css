@@ -30,23 +30,105 @@
 
 .card__top{
   font-size: larger;
+  margin: 0 0 18px 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  color: rgb(0, 102, 255);
+  transition: color 0.3s ease-out;
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-sizing: border-box;
+  
 
 }
-
-.ccc{
+.ccc,.ddd{
   font-weight: 900;
+  color: rgb(247, 65, 4);
+  margin: 0 0 18px 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.2rem;
+   box-sizing: border-box;
+  
+}
+.ddd:hover,
+.ddd:focus{
+  font-weight: 900;
+  color: rgb(247, 65, 4);
+  margin: 0 0 18px 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  transition: color 0.3s ease-out;
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-sizing: border-box;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
 
+}
+  
+.ccc:hover,
+.ccc:focus{
+  font-weight: 900;
+  color: rgb(247, 65, 4);
+  margin: 0 0 18px 0;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  transition: color 0.3s ease-out;
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-sizing: border-box;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
 }
 
 .aaa{
   text-decoration: none;
   font-size: larger;
   font-weight: bolder;
+  color: lightseagreen;
 }
 
 .caaa{
-  display: flex;
+  display: grid;
   flex-wrap: wrap ;
+  padding: 2rem;
+  color: lightcoral;
+ 
 
 
 }
+.qqq{
+  display: grid;
+  flex-wrap: wrap;
+  padding: 2rem;
+  color: lightcoral;
+}
+
+.zzz{
+  display: grid;
+  justify-content: center;
+  min-width: 15px;
+  width: 150px;
+  height: 150px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+  outline: 1px dotted #28666e;
+  
+}
+

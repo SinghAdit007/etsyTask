@@ -10,8 +10,7 @@ function Search() {
     const handleclick=async()=>{
 
 
-        
-        Result.sort((a,b)=>(b.views-a.views))
+        setopen4('true')
         
         
         Result.map((data,key)=>console.log(data,"a"))
@@ -35,19 +34,22 @@ function Search() {
     }
     return (
         <div>
-            {open4 && <div className='sear'> <div class="warning">
-                <span class="icon">&#9888;</span>
-                <p>Result will be displayed through website api</p>
+            {open4 && <div className='sear'> <div class="   ">
+                {/* <span class="icon">&#9888;</span>
+                <p>Result will be displayed through website api</p> */}
             </div></div>}
             <div class="search-container">
                 <input type="text" class="search-input" onChange={(e)=>setval(e.target.value)} placeholder="Search keyword" />
                 <button onClick={handleclick} class="search-button">Search</button>
             </div>
 
-            {
+            {open4 && 
+        Result.sort((a,b)=>(b.views-a.views))
+        &&
+
                 Result.map((data,key)=>(
 <div className='caaa'>
-                    <Card2 title={data.title} description={data.description} url={data.url}></Card2>
+                    <Card2 title={data.title} price={data.price.amount} url={data.url} views={data.views}></Card2>
 </div>
                 ))
             }
