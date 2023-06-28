@@ -152,3 +152,37 @@
   
 }
 
+.kkk{ 
+   font-weight: 900;
+  color: rgb(4, 154, 247);
+  margin: 0 0 18px 0;
+  font-family: 'Lobster', cursive;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
+  transition: color 0.3s ease-out;
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-sizing: border-box;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.ppp{
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  line-height: 50px;
+  margin-top: -50px;
+  margin-bottom: 24px;
+  text-shadow: black 1px 0 15px;
+  color: rgb(235, 90, 18);
+  padding-bottom: 3rem;
+  
+}

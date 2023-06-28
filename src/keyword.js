@@ -47,17 +47,18 @@ function Search() {
             </div>
             <table>
             <tr>
-    <th>keyword</th>
-    <th>cnt</th>
+    <th className = 'ppp'>Keyword </th> 
+    <th className='ppp'>Count...</th>
     {/* <th>Country</th> */}
+    
   </tr>
             {
             
 
               Object.entries(dd).map((t,k)=>(
-                <tr>
-                <td>{t}</td>
-                <td>{dd[t]}</td>
+                <tr className ='kkk'>
+                <td className='kkk'><br/>{t}</td>
+                <td classname = 'www'><br/>{dd[t]}</td>
               
               </tr>
 
