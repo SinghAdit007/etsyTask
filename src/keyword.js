@@ -4,55 +4,80 @@ import Card2 from './Card';
 import Result from './data';
 function Search() {
     const [open4, setopen4] = useState(false);
-    const [val,setval]=useState('');
+    const [val, setval] = useState('');
+    const [dd,setdd]=useState({});
 
 
-    const handleclick=async()=>{
+    const handleclick = async () => {
 
+        setopen4(!open4);
+        let ii={
 
-        setopen4('true')
-        
-        
-        Result.map((data,key)=>console.log(data,"a"))
-//         var headers = new Headers();
-// headers.append("x-api-key", "0aa6qx7gfy3cds87hvijwe40");
-// headers.append('Access-Control-Allow-Origin', 'http://localhost:3000');
-// headers.append('Access-Control-Allow-Credentials', 'true');
-// headers.append('Access-Control-Allow-Methods' , 'GET')
+        }
+        let items = JSON.parse(localStorage.getItem('etsydata'));
 
-// var requestOptions = {
-//     method: 'GET',
-//     credentials: "include",
-//     headers: headers,
-// };
-            
-// await fetch(`https://api.etsy.com/v3/application/listings/active?client_id=aoeoryx59j26t30056nqabv8&keywords=jewellery`   , {method: 'GET', mode:'cors', credentials: 'include',
-// headers: {Accept: 'application/json'}})
-// .then(response => console.log(response))
-// .then(result => console.log(result))
-// .catch(error => console.log('error', error));
+        if(items==null)
+        {
+
+            localStorage.setItem('etsydata', JSON.stringify(ii));
+        }
+        else
+                {
+         if(items.hasOwnProperty(`${val}`))
+         {
+            items[`${val}`]=1+items[`${val}`];
+         }
+         else
+         {
+            items[`${val}`]=1;
+         }
+            localStorage.setItem('etsydata', JSON.stringify(items));
+            // let entries = Object.entries(items);
+        setdd(items);
+         }
+        // console.log(entries);
+
     }
     return (
         <div>
-            {open4 && <div className='sear'> <div class="   ">
-                {/* <span class="icon">&#9888;</span>
-                <p>Result will be displayed through website api</p> */}
-            </div></div>}
+
             <div class="search-container">
-                <input type="text" class="search-input" onChange={(e)=>setval(e.target.value)} placeholder="Search keyword" />
+                <input type="text" class="search-input" onChange={(e) => setval(e.target.value)} placeholder="Search keyword" />
                 <button onClick={handleclick} class="search-button">Search</button>
             </div>
+            <table>
+            <tr>
+    <th>keyword</th>
+    <th>cnt</th>
+    {/* <th>Country</th> */}
+  </tr>
+            {
+            
 
-            {open4 && 
-        Result.sort((a,b)=>(b.views-a.views))
-        &&
+              Object.entries(dd).map((t,k)=>(
+                <tr>
+                <td>{t}</td>
+                <td>{dd[t]}</td>
+              
+              </tr>
 
-                Result.map((data,key)=>(
-<div className='caaa'>
-                    <Card2 title={data.title} price={data.price.amount} url={data.url} views={data.views}></Card2>
-</div>
-                ))
+                
+              ))
             }
+              </table>
+
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+
 
         </div>
     )
